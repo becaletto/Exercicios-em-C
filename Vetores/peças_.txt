@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main()
+{
+    setlocale (LC_ALL,"portuguese");
+    int vet1[10], i;
+    float vet2[10], vt;
+
+    for(i=0;i<10;i++)
+    {
+        printf("Peça %i\nQuantidade de peças vendidas: ",i+1);
+        scanf("%i",&vet1[i]);
+        printf("Valor da peça: R$");
+        scanf("%f",&vet2[i]);
+    }
+
+    for(i=0;i<10;i++)
+    {
+        printf("Peça %i\n",i+1);
+        printf("Quantidade vendida: %i\n",vet1[i]);
+        vt = vet1[i]*vet2[i];
+        printf("Valor total: R$%f\n",vt);
+    }
+
+
+
+    return 0;
+}
+

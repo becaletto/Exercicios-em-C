@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{ setlocale(LC_ALL,"Portuguese");
+    int ad,f,ra;
+    float n1,n2,n3,m,l,r,mf;
+    printf("Digite o número de aulas dadas: ");
+    scanf("%d",&ad);
+    l=ad*0.25;
+    printf("Digite seu ra e o número de faltas: ");
+    scanf("%d %d",&ra,&f);
+    printf("Digite as notas das três provas: ");
+    scanf("%f %F %f",&n1,&n2,&n3);
+    m=(n1+n2+n3)/3;
+    printf("Média: %.1f\n",m);
+    if(f>l)
+        printf("Reprovado por faltas");
+    else
+    {
+        if(m>=6)
+            printf("Aprovado");
+        else
+        {
+            printf("Digite a nota da recuperação: ");
+            scanf("%f",r);
+            mf=(m+r)/2;
+        }
+    }
+
+    return 0;
+}
